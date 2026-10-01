@@ -1,0 +1,43 @@
+.app-shell { min-height: 100svh; background: var(--paper); }
+.topbar, .content { width: min(100% - 48px, 920px); margin: 0 auto; }
+.topbar { padding: 40px 0 20px; border-bottom: 1px solid var(--line); }
+.topbar h1 { margin: 0; color: var(--ink); font-family: var(--display); font-size: 36px; letter-spacing: -0.05em; }
+.content { padding: 36px 0 70px; }
+.section-heading { display: flex; justify-content: space-between; gap: 32px; align-items: center; }
+h1, h2, h3, p { margin-top: 0; }
+.composer { padding: 24px; background: var(--ink); color: #fff; border-radius: 12px; }
+.section-heading h2 { margin: 0; color: inherit; font-family: var(--display); font-size: 26px; letter-spacing: -0.04em; }
+.task-form { display: grid; grid-template-columns: 1fr 1.3fr auto; gap: 14px; align-items: end; margin-top: 28px; }
+label { display: grid; gap: 8px; color: #aeb3b5; font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; }
+input, textarea { width: 100%; box-sizing: border-box; border: 1px solid #4a5159; border-radius: 8px; outline: none; background: #30363d; color: #fff; font: inherit; font-size: 14px; letter-spacing: 0; padding: 13px 14px; resize: vertical; transition: border-color 160ms ease, background 160ms ease; }
+input { height: 48px; }
+input::placeholder, textarea::placeholder { color: #7d858d; }
+input:focus, textarea:focus { border-color: var(--coral); background: #353c43; }
+.add-button { display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 48px; padding: 0 19px; border: 0; border-radius: 8px; background: var(--coral); color: #fff; font: inherit; font-size: 13px; font-weight: 800; cursor: pointer; transition: transform 160ms ease, background 160ms ease; }
+.add-button:hover { background: #ee715e; transform: translateY(-2px); }
+.plus { font-size: 21px; font-weight: 400; line-height: 0; }
+.tasks-section { margin-top: 42px; }
+.tasks-section > h2 { margin-bottom: 18px; color: var(--ink); font-family: var(--display); font-size: 26px; letter-spacing: -0.04em; }
+.task-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 25px; }
+.empty-state { grid-column: 1 / -1; margin: 0; padding: 36px 20px; border: 1px dashed var(--line); border-radius: 10px; color: var(--muted); text-align: center; }
+.task-card { position: relative; display: flex; flex-direction: column; min-height: 235px; padding: 24px 22px 19px; box-sizing: border-box; border: 1px solid var(--line); border-radius: 12px; background: #fff; transition: transform 160ms ease, box-shadow 160ms ease; }
+.task-card:hover { transform: translateY(-4px); box-shadow: 0 14px 28px rgba(30, 35, 43, 0.09); }
+.task-body h3 { margin: 0 0 8px; color: var(--ink); font-family: var(--display); font-size: 21px; line-height: 1.08; letter-spacing: -0.035em; }
+.task-body p { color: var(--muted); font-size: 13px; line-height: 1.55; }
+.card-actions { display: flex; gap: 14px; margin-top: auto; padding-top: 20px; }
+.card-actions button { padding: 0; border: 0; background: none; color: var(--muted); font: inherit; font-size: 12px; cursor: pointer; }
+.card-actions button:hover { color: var(--coral); }
+.edit-overlay { position: fixed; inset: 0; z-index: 10; display: grid; place-items: center; padding: 24px; background: rgba(37, 43, 50, 0.52); }
+.edit-panel { width: min(100%, 520px); box-sizing: border-box; padding: 30px; border-radius: 16px; background: var(--paper); box-shadow: 0 24px 70px rgba(22, 26, 30, 0.3); }
+.edit-panel-heading { display: flex; justify-content: space-between; align-items: start; gap: 20px; }
+.edit-panel-heading h2 { margin: 0; color: var(--ink); font-family: var(--display); font-size: 26px; letter-spacing: -0.04em; }
+.close-button { width: 30px; height: 30px; padding: 0; border: 1px solid var(--line); border-radius: 50%; background: transparent; color: var(--muted); font-size: 16px; cursor: pointer; }
+.edit-form { display: grid; gap: 18px; margin-top: 28px; }
+.edit-form label { color: var(--muted); }
+.edit-form input, .edit-form textarea { border-color: var(--line); background: #fff; color: var(--ink); }
+.edit-form input:focus, .edit-form textarea:focus { border-color: var(--coral); background: #fff; }
+.edit-actions { display: flex; justify-content: end; gap: 12px; padding-top: 4px; }
+.cancel-button, .save-button { height: 42px; padding: 0 16px; border-radius: 7px; font: inherit; font-size: 12px; font-weight: 800; cursor: pointer; }
+.cancel-button { border: 1px solid var(--line); background: transparent; color: var(--muted); }
+.save-button { border: 0; background: var(--coral); color: #fff; }
+@media (max-width: 760px) { .topbar, .content { width: min(100% - 32px, 920px); } .topbar { padding-top: 28px; } .content { padding-top: 24px; } .composer { padding: 22px; } .task-form { grid-template-columns: 1fr; } .add-button { width: 100%; } .task-list { grid-template-columns: 1fr; } .task-card { min-height: 205px; } }

@@ -1,0 +1,9 @@
+:root { --paper: #f8f6f1; --ink: #252b32; --muted: #7b817e; --line: #dfddd6; --coral: #e45d4a; --display: Georgia, 'Times New Roman', serif; --sans: 'Trebuchet MS', 'Segoe UI', sans-serif; font: 16px/145% var(--sans); color: var(--ink); background: var(--paper); font-synthesis: none; text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; }
+
+body {
+  margin: 0;
+}
+
+#root {
+  min-height: 100svh;
+}
